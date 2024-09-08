@@ -1,0 +1,65 @@
+body, html{
+  height:100%
+}
+
+.hoverit {
+  position: relative;
+  display: inline-block;
+}
+
+#nav-bar {
+  background-image: url('../images/banner1.jpg');
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img[alt="logo"] {
+  width: 50px;
+}
+
+.text-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out;
+  background-color: #fff;
+  padding: 20px;
+  opacity: 0;
+}
+
+.hoverit:hover .text-card {
+  opacity: 1;
+}
+
+.add-to-cart {
+  opacity: 0.5;
+  color: black;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.add-to-cart:hover {
+  font-size: 18px;
+  opacity: 1;
+  color: gray;
+}
+
+footer>* {
+  color: #fff;
+}
+
+#content2 {
+  margin: 100px;
+  text-align: left;
+}
+
+#product-nav {
+  margin: 50px;
+  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);
+}
+
+#form-body {
+  background: linear-gradient(#000000, #000000, #0000af, #00003f);
+}

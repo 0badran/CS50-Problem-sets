@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Wait for content loaded
+            document.addEventListener("DOMContentLoaded", () => {
+                // TODO: Add code to check answers to questions
+                // Part 1 logic.
+                const notic1 = document.getElementById("notic1");
+                const answPart1 = document.getElementById("answ-part1").children;
+                for (const ele of answPart1) {
+                    ele.addEventListener("click", () => {
+                        const list = ele.classList[0];
+                        if (list === "correct") {
+                            ele.style = "background-color:green;";
+                            notic1.style = "color:green";
+                            notic1.textContent = "Correct";
+                        } else {
+                            ele.style = "background-color:red;";
+                            notic1.style = "color:red";
+                            notic1.textContent = "Incorrect";
+                        }
+                    })
+                }
+                const notic2 = document.getElementById("notic2");
+                const answer = document.getElementById("answer");
+                const checkAnswer = document.getElementById("check-answer");
+                checkAnswer.addEventListener("click", () => {
+                    const result = answer.value ? answer.value.toLowerCase() : "";
+                    if (result === "linus torvalds") {
+                        answer.style = "border:1px solid green";
+                        notic2.textContent = "Correct";
+                        notic2.style = "color:green";
+                    } else {
+                        answer.style = "border:1px solid red";
+                        notic2.textContent = "Incorrect";
+                        notic2.style = "color:red";
+                    }
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In what year was javaScript language invented?</h3>
+                <p id="notic1"></p>
+                <div id="answ-part1">
+                    <button type="button" class="correct">1994</button>
+                    <button type="button">1991</button>
+                    <button type="button">2000</button>
+                    <button type="button">1972</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who is the programmer who invented Linux?</h3>
+                <p id="notic2"></p>
+                <input type="text" autocomplete="off" id="answer" />
+                <button type="button" id="check-answer">Check Answer</button>
+            </div>
+        </div>
+    </body>
+
+</html>

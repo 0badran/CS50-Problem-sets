@@ -1,0 +1,2 @@
+1 - By specifying the genre of songs he prefers.
+2 - Determine the category of songs he listens to based on the existing vocal aura categories, and choose the highest listening category to represent his vocal aura.

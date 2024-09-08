@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if len(companys) %}
+        {% for company in companys %}
+        <tr>
+            <td>{{company["symbol"]}}</td>
+            <td>{{company["shares"]}}</td>
+            <td>{{usd_format(company["price"])}}</td>
+            <td>{{usd_format(company["total"])}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+        <tr>
+            <td></td>
+            <td></td>
+            <th>Cash</th>
+            <th>{{usd_format(user_cash)}}</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <th>Total</th>
+            <th>{{usd_format(user_cash+stocks_total)}}</th>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

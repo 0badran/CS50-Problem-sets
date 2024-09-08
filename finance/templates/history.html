@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+<table class="table table-dark table-striped">
+    <thead class="table">
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Transaction</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%if len(transactions)%}
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{transaction["symbol"]}}</td>
+            <td>{{transaction["shares"]}}</td>
+            <td>{{usd_format(transaction["price"])}}</td>
+            <td>{{usd_format(transaction["total"])}}</td>
+            {% if transaction["type"] == "buy"%}
+            <td>{{transaction["type"]}} <i class="bi bi-caret-down-fill text-success"></i></td>
+            {%else%}
+            <td>{{transaction["type"]}} <i class="bi bi-caret-up-fill text-danger"></i></td>
+            {%endif%}
+            <td>{{transaction["date"]}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}

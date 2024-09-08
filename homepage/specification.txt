@@ -1,0 +1,7 @@
+1 - HTML Tags: nav, div, p, a, button, span, ul, li, svg, form, input
+
+2 - CSS Properties: color, background-color, font-size, margin, padding, position, transition, opacity
+
+3 - CSS Selectors: ID, Class, TagName, Attribute, Universal, Child Combinator
+
+4 - JavaScript to Make interactive pages and request data, Bootstrap is awesome for response pages.

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quote
+{% endblock %}
+
+{% block main %}
+<table class="table table-primary table-striped">
+    <thead>
+        <tr>
+            <th>A share</th>
+            <th>Costs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{company.symbol}}</td>
+            <td>{{usd_format(company.price)}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

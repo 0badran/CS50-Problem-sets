@@ -1,0 +1,12 @@
+sort1 uses: Bubble sort.
+
+How do you know?: because, it's slow, his real time in random 50000 is 6s.
+
+sort2 uses: Merge sort.
+
+How do you know?: It's faster, his real time in random 50000 is 1s😄.
+
+sort3 uses: Selection sort.
+
+How do you know?: It's middle, it real-time in random 50000 is 3s.
+
